@@ -39,7 +39,7 @@ const projects = [
     num: "04",
     category: "Fullstack",
     title: "Real Time Chat",
-    description: "A full stack app that allows your to chat in real time with others.",
+    description: "A full stack app that allows you to chat in real time with others.",
     stack: [{ name: "React" }, { name: "Firebase" }],
     image: "/assets/projects/chat.png",
     live: "https://react-slack-clone-80647.firebaseapp.com/login",
@@ -65,7 +65,7 @@ const projects = [
     live: "https://vimeo.com/823934123",
     github: "",
     vimeo: "https://vimeo.com/823934123",
-    videoUrl: "https://player.vimeo.com/video/823934123", // Store the video URL directly
+    videoUrl: "https://player.vimeo.com/video/823934123", 
   },
   {
     num: "06",
@@ -77,7 +77,7 @@ const projects = [
     live: "https://vimeo.com/823899563",
     github: "",
     vimeo: "https://vimeo.com/823899563",
-    videoUrl: "https://player.vimeo.com/video/823899563", // Store the video URL directly
+    videoUrl: "https://player.vimeo.com/video/823899563", 
   },
   {
     num: "07",
@@ -89,7 +89,7 @@ const projects = [
     live: "https://vimeo.com/233770793",
     github: "",
     vimeo: "https://vimeo.com/233770793",
-    videoUrl: "https://player.vimeo.com/video/233770793", // Store the video URL directly
+    videoUrl: "https://player.vimeo.com/video/233770793", 
   },
   {
     num: "06",
@@ -101,7 +101,7 @@ const projects = [
     live: "https://vimeo.com/779450696",
     github: "",
     vimeo: "https://vimeo.com/779448273",
-    videoUrl: "https://player.vimeo.com/video/779450696", // Store the video URL directly
+    videoUrl: "https://player.vimeo.com/video/779450696", 
   },
   {
     num: "07",
@@ -113,8 +113,8 @@ const projects = [
     live: "https://vimeo.com/779448273",
     github: "",
     vimeo: "https://vimeo.com/779448273",
-    videoUrl: "https://player.vimeo.com/video/779448273", // Store the video URL directly
-  },
+    videoUrl: "https://player.vimeo.com/video/779448273", 
+  }
 ];
 
 const Projects = () => {

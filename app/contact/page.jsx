@@ -3,7 +3,6 @@
 import { useRef, useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/lib/variants";
 import Swal from "sweetalert2";
 
 // components
@@ -12,11 +11,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 const info = [
-  // {
-  //   icon: <FaPhoneAlt />,
-  //   title: "Phone",
-  //   description: "",
-  // },
   {
     icon: <FaEnvelope />,
     title: "Email",
@@ -35,29 +29,60 @@ const Contact = () => {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    console.log("Form submission started...");
+
     const formData = new FormData(event.target);
+    console.log("Form Data:", formData);
 
+    // Append the access key
     formData.append("access_key", "fe25d3ba-7ab7-406f-b32c-6a823dfeb05e");
+    console.log("Form Data with access key:", formData);
 
+    // Convert FormData to an object
     const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+    console.log("Object from FormData:", object);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    });
-    const result = await response.json();
-    if (result.success) {
-      Swal.fire({
-        title: "Success!",
-        text: "Message sent successfully!",
-        icon: "success",
+    // Convert object to JSON
+    const json = JSON.stringify(object);
+    console.log("JSON string to be sent:", json);
+
+    // Send request
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
       });
-      formRef.current.reset(); // Reset the form
+
+      const result = await response.json();
+      console.log("API Response:", result);
+
+      if (result.success) {
+        console.log("Message sent successfully");
+        Swal.fire({
+          title: "Success!",
+          text: "Message sent successfully!",
+          icon: "success",
+        });
+        formRef.current.reset(); // Reset the form
+      } else {
+        console.error("Message failed to send:", result.message);
+        Swal.fire({
+          title: "Error!",
+          text: result.message || "Failed to send the message.",
+          icon: "error",
+        });
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      Swal.fire({
+        title: "Error!",
+        text: "An error occurred while sending your message.",
+        icon: "error",
+      });
     }
   }
 
