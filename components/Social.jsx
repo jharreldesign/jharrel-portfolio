@@ -1,9 +1,9 @@
-import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaDiscord, FaMailBulk, FaEnvelope } from "react-icons/fa";
 
 const socials = [
-  { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/solarluiso/" },
-  { icon: <FaGithub />, path: "https://github.com/solarluiso" },
-  { icon: <FaDiscord />, path: "https://discordapp.com/users/solarluiso" },
+  { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/jasonharrel/" },
+  { icon: <FaGithub />, path: "https://github.com/jharreldesign" },
+  { icon: <FaEnvelope />, path: "mailto:jharreldesign@gmail.com" },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {

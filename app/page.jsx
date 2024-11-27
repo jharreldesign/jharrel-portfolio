@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import Projects from "@/app/projects/page"; // Import the Projects component
 
 const Home = () => {
   return (
@@ -16,9 +17,10 @@ const Home = () => {
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 xl:items-start"
+      className="min-h-[80vh] flex flex-col items-center justify-center py-12 xl:py-0 xl:items-start"
     >
       <div className="container mx-auto">
+        {/* Intro Section */}
         <div className="flex flex-col xl:flex-row items-center justify-center xl:gap-[100px] xl:py-[60px]">
           {/* text */}
           <div className="flex flex-col gap-5 order-2 xl:order-none w-auto max-w-[490px] text-center xl:text-left">
@@ -33,34 +35,24 @@ const Home = () => {
               <h1 className="h1">
                 Hello!
                 <br />
-                I'm <span className="text-accent">Luiso</span>
+                I'm <span className="text-accent">Jason</span>
               </h1>
             </motion.div>
             {/* bio */}
             <motion.div
-              variants={fadeIn("down", 0.6)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.2 }}
-              className="flex flex-col gap-2 xl:ml-12"
-            >
-              <h3 className="h3 text-white/60">Web Developer</h3>
-              <p className="p max-w-[312px]">
-                I shape ideas into interactive web experiences, while sipping
-                coffee on a glorious day.
-              </p>
-            </motion.div>
-            {/* take action */}
-            <motion.h3
-              variants={fadeIn("down", 0.4)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.2 }}
-              className="h3 xl:ml-24"
-            >
-              Let's create something <br />
-              remarkable together!
-            </motion.h3>
+  variants={fadeIn("down", 0.6)}
+  initial="hidden"
+  whileInView={"show"}
+  viewport={{ once: false, amount: 0.2 }}
+  className="flex flex-col gap-2"
+>
+  <h3 className="h3 text-white/60">Web Developer/Creative Designer</h3>
+  <p className="p max-w-[312px]">
+    I shape ideas into interactive web experiences and video content, while sipping
+    on too much coffee daily.
+  </p>
+</motion.div>
+
             {/* btn and socials */}
             <motion.div
               variants={fadeIn("down", 0.2)}
@@ -69,7 +61,7 @@ const Home = () => {
               viewport={{ once: false, amount: 0.2 }}
               className="flex flex-col xl:flex-row xl:mt-[5px] items-center gap-8"
             >
-              <a href="/assets/Luis-Solar-CV.pdf" download>
+              <a href="/assets/Jason-Harrel-Resume.pdf" download>
                 <Button
                   variant="outline"
                   size="lg"
@@ -92,10 +84,18 @@ const Home = () => {
             <Photo />
           </div>
         </div>
+
+        {/* Stats Section */}
         <Stats />
+
+        {/* Projects Section */}
+        <h2>Projects</h2>
+        <Projects /> {/* Include the Projects component */}
       </div>
     </motion.div>
   );
 };
 
 export default Home;
+
+

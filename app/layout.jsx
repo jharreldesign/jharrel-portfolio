@@ -18,9 +18,9 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Luis Solar - Developer Portfolio",
+  title: "Jason Harrel - Developer Portfolio",
   description:
-    "Explore the portfolio of Luis Solar, a web developer showcasing his projects and expertise.",
+    "Explore the portfolio of Jason Harrel, a web developer showcasing his projects and expertise.",
 };
 
 export default function RootLayout({ children }) {

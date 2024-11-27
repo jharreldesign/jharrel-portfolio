@@ -12,20 +12,20 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 const info = [
-  {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    description: "(+1) 786 825 4670",
-  },
+  // {
+  //   icon: <FaPhoneAlt />,
+  //   title: "Phone",
+  //   description: "",
+  // },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "solarluiso@gmail.com",
+    description: "harrel.jason@gmail.com",
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Location",
-    description: "Washington, DC",
+    description: "Portland, OR",
   },
 ];
 
@@ -37,7 +37,7 @@ const Contact = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "c83ad2be-7bc5-4273-9457-6524f5deda36");
+    formData.append("access_key", "fe25d3ba-7ab7-406f-b32c-6a823dfeb05e");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);

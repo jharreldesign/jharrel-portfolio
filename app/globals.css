@@ -8,20 +8,25 @@
 
 @layer base {
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary bg-gray-900 text-white leading-loose; 
   }
+
   .h1 {
     @apply text-[36px] xl:text-[74px] leading-[1.1] font-extrabold uppercase;
   }
+
   .h2 {
     @apply text-[32px] xl:text-[36px] leading-[1.1] font-extrabold uppercase;
   }
+
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-extrabold uppercase;
   }
+
   .p {
     @apply text-base text-white/60 font-light;
   }
+
   .text-outline {
     -webkit-text-stroke: 1px #ffffff;
   }
@@ -29,4 +34,27 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #57ebd7;
   }
+
+  .modal-container {
+    @apply fixed inset-x-0 z-50 flex justify-center items-start bg-black bg-opacity-50;
+    top: 0%;  /* Move the modal up by 10% of the viewport height */
+  }
+  
+  .modal-content {
+    @apply p-8 rounded-lg overflow-hidden;
+    width: 80%;  /* Width set to 80% of the viewport */
+    height: 80%; /* Height set to 80% of the viewport */
+  }
+  
+  .modal-close-btn {
+    @apply absolute top-4 right-4 text-white font-bold bg-opacity-50 hover:bg-opacity-75 transition-all rounded-full p-2;
+  }
+  
+  .modal-iframe {
+    @apply w-full h-full rounded-lg object-contain; /* Ensures the iframe takes up full space and scales proportionally */
+  }
+  
+  
+  
+  
 }

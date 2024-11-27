@@ -7,6 +7,15 @@ import {
   SiExpress,
   SiMongodb,
   SiDocker,
+  SiAdobepremierepro,
+  SiAdobeaftereffects,
+  SiAdobephotoshop,
+  SiAdobeillustrator,
+  SiAdobeindesign,
+  SiCinema4D,
+  SiHtml5,
+  SiCss3,
+
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -28,28 +37,28 @@ const about = {
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Luis Solar",
+      fieldValue: "Jason Harrel",
     },
-    {
-      fieldName: "Experience",
-      fieldValue: "2+ Years",
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(+1) 786 825 4670",
-    },
+    // {
+    //   fieldName: "Experience",
+    //   fieldValue: "2+ Years",
+    // },
+    // {
+    //   fieldName: "Phone",
+    //   fieldValue: "(+1) 786 825 4670",
+    // },
 
     {
       fieldName: "Email",
-      fieldValue: "solarluiso@gmail.com",
+      fieldValue: "harrel.jason@gmail.com",
     },
     {
       fieldName: "Location",
-      fieldValue: "Washington DC, USA",
+      fieldValue: "Portland, OR, USA",
     },
     {
-      fieldName: "Languages",
-      fieldValue: "English, Spanish",
+      fieldName: "Skills",
+      fieldValue: "HTML, CSS, JavaScript, React.JS, ",
     },
   ],
 };
@@ -60,6 +69,14 @@ const skills = {
   description:
     "Adept in the JavaScript ecosystem, I work with modern frameworks and tools to build fast and visually engaging web applications that deliver seamless user experiences.",
   skillList: [
+    {
+      icon: <SiHtml5 />,
+      name: "HTML5",
+    },
+    {
+      icon: <SiCss3 />,
+      name: "CSS3",
+    },
     {
       icon: <FaJs />,
       name: "JavaScript",
@@ -89,8 +106,24 @@ const skills = {
       name: "MongoDB",
     },
     {
-      icon: <SiDocker />,
-      name: "Docker",
+      icon: <SiAdobepremierepro />,
+      name: "Premiere Pro",
+    },
+    {
+      icon: <SiAdobeaftereffects />,
+      name: "After Effects",
+    },
+    {
+      icon: <SiAdobephotoshop />,
+      name: "Photoshop",
+    },
+    {
+      icon: <SiAdobeillustrator />,
+      name: "Illustrator",
+    },
+    {
+      icon: <SiCinema4D />,
+      name: "Cinema4D",
     },
   ],
 };
@@ -103,24 +136,24 @@ const experience = {
     "Proficient in frontend and backend technologies, working effectively with cross-functional teams and stakeholders.",
   items: [
     {
-      position: "Built a full-stack web application.",
-      duration: "2024",
-      description: "Bootcamp Project",
+      position: "Multi-platform Video Editor",
+      duration: "2020 - 2023",
+      description: "NBC Sports Bay Area/California",
     },
     {
-      position: "Contributed to an open-source project.",
-      duration: "2024",
-      description: "Grammerhub",
+      position: "Assistant Director: Creative Services",
+      duration: "2018 - 2019",
+      description: "UC Davis",
     },
     {
-      position: "Implemented a portfolio website.",
-      duration: "2023",
-      description: "Personal Project",
+      position: "Pitchcast Operator",
+      duration: "2019",
+      description: "Major League Baseball",
     },
     {
-      position: "Developed a small business website.",
-      duration: "2023",
-      description: "Freelance",
+      position: "Production Manager",
+      duration: "2017 - 2018",
+      description: "Quad Cities River Bandits",
     },
   ],
 };
@@ -130,27 +163,27 @@ const education = {
   icon: "/assets/about/cap.svg",
   title: "My education",
   description:
-    "Solid academic foundation in computer science, enhanced by specialized certifications.",
+    "Solid academic foundation in computer science, enhanced by education in Motion Media and Communications.",
   items: [
     {
-      institution: "Coursera",
-      degree: "Meta Front-End Developer Certificate",
-      duration: "2023",
+      institution: "Western Goveners University ",
+      degree: "B.S. Computer Science",
+      duration: "2025",
     },
     {
-      institution: "Miami Dade College",
-      degree: "Associate Degree in Computer Science",
-      duration: "2016 - 2018",
+      institution: "General Assembly",
+      degree: "Software Engineer Intensive",
+      duration: "2024",
     },
     {
-      institution: "Miami Dade College",
-      degree: "PHI THETA KAPPA Honor Society",
-      duration: "2015",
+      institution: "Savannah College Art Design",
+      degree: "Masters of Science: Motion Media Design",
+      duration: "2015 - 2017",
     },
     {
-      institution: "UCI (Cuba)",
-      degree: "Engineering in Computer Science",
-      duration: "2010 - 2013",
+      institution: "Western Oregon University",
+      degree: "B.S. Communications",
+      duration: "2012",
     },
   ],
 };
