@@ -73,7 +73,7 @@ const projects = [
     title: "Playoff Highlights: Golden State Warriors",
     description: "Highlight reel for the Golden State Warriors playoff game vs. Sacramento Kings",
     stack: [{ name: "Premiere Pro" }, { name: "After Effects" }],
-    image: "/assets/projects/Curry.jpg",
+    image: "/assets/projects/curry-playoff.png",
     live: "https://vimeo.com/823899563",
     github: "",
     vimeo: "https://vimeo.com/823899563",
