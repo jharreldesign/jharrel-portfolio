@@ -16,6 +16,17 @@ import {
 const projects = [
   {
     num: "01",
+    category: "Fullstack",
+    title: "Gideon Rogue Productions",
+    description:
+      "A full stack application a music venue production house.",
+    stack: [{ name: "NEXT JS" }, { name: "Flask" }],
+    image: "/assets/projects/GRProductions.png",
+    live: "https://gideon-rogue-productions.vercel.app/",
+    github: "https://github.com/jharreldesign/Gideon-Rogue-Productions",
+  },
+  {
+    num: "02",
     category: "Frontend",
     title: "MTG: League",
     description:
@@ -26,7 +37,7 @@ const projects = [
     github: "https://github.com/jharreldesign/MTGLeague",
   },
   {
-    num: "02",
+    num: "03",
     category: "Fullstack",
     title: "Earthwise Packaging",
     description: "An eco-friendly e-commerce app for restaurants.",
@@ -46,7 +57,7 @@ const projects = [
     github: "",
   },
   {
-    num: "03",
+    num: "05",
     category: "Frontend",
     title: "Zombie Attack",
     description: "A React based game to show lifting state.",
@@ -56,7 +67,7 @@ const projects = [
     github: "",
   },
   {
-    num: "05",
+    num: "06",
     category: "Video Production",
     title: "Demo Reel",
     description: "2023 Demo Reel",
@@ -92,7 +103,7 @@ const projects = [
     videoUrl: "https://player.vimeo.com/video/233770793", 
   },
   {
-    num: "06",
+    num: "07",
     category: "Video Production",
     title: "UC Davis Football Intro Hype",
     description: "Intro video for the UC Davis football team.",
