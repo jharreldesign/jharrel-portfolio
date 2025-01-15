@@ -15,7 +15,39 @@ import {
 
 const projects = [
   {
-    num: "01",
+    // num: "01",
+    category: "Fullstack",
+    title: "Gideon Rogue Productions",
+    description:
+      "A full stack application a music venue production house.",
+    stack: [{ name: "NEXT JS" }, { name: "Flask" }],
+    image: "/assets/projects/GRProductions.png",
+    live: "https://gideon-rogue-productions.vercel.app/",
+    github: "https://github.com/jharreldesign/Gideon-Rogue-Productions",
+  },
+  {
+    // num: "04",
+    category: "Fullstack",
+    title: "Earthwise Packaging",
+    description: "An eco-friendly e-commerce app for restaurants.",
+    stack: [{ name: "React" }, { name: "MongoDB" }, { name: "Express" }, { name: "NodeJS" }],
+    image: "/assets/projects/earthwise.png",
+    live: "https://earthwisepackaging.netlify.app/",
+    github: "https://github.com/jharreldesign/Earthwise-Packaging-Server",
+  },
+  {
+    // num: "02",
+    category: "Fullstack",
+    title: "Cat Collector",
+    description:
+      "A full stack application to keep track of all your furry friends.",
+    stack: [{ name: "Django" }, { name: "Python" }],
+    image: "/assets/projects/catcollector.png",
+    live: "https://cat-collector-django-0b9c0caf7459.herokuapp.com",
+    github: "https://github.com/jharreldesign/django-crud-app-cat-collector",
+  },
+  {
+    // num: "03",
     category: "Frontend",
     title: "MTG: League",
     description:
@@ -26,17 +58,7 @@ const projects = [
     github: "https://github.com/jharreldesign/MTGLeague",
   },
   {
-    num: "02",
-    category: "Fullstack",
-    title: "Earthwise Packaging",
-    description: "An eco-friendly e-commerce app for restaurants.",
-    stack: [{ name: "React" }, { name: "MongoDB" }, { name: "Express" }, { name: "NodeJS" }],
-    image: "/assets/projects/earthwise.png",
-    live: "https://earthwisepackaging.netlify.app/",
-    github: "https://github.com/jharreldesign/Earthwise-Packaging-Server",
-  },
-  {
-    num: "04",
+    // num: "05",
     category: "Fullstack",
     title: "Real Time Chat",
     description: "A full stack app that allows you to chat in real time with others.",
@@ -46,7 +68,7 @@ const projects = [
     github: "",
   },
   {
-    num: "03",
+    // num: "06",
     category: "Frontend",
     title: "Zombie Attack",
     description: "A React based game to show lifting state.",
@@ -56,7 +78,7 @@ const projects = [
     github: "",
   },
   {
-    num: "05",
+    // num: "06",
     category: "Video Production",
     title: "Demo Reel",
     description: "2023 Demo Reel",
@@ -68,7 +90,7 @@ const projects = [
     videoUrl: "https://player.vimeo.com/video/823934123", 
   },
   {
-    num: "06",
+    // num: "07",
     category: "Video Production",
     title: "Playoff Highlights: Golden State Warriors",
     description: "Highlight reel for the Golden State Warriors playoff game vs. Sacramento Kings",
@@ -80,7 +102,7 @@ const projects = [
     videoUrl: "https://player.vimeo.com/video/823899563", 
   },
   {
-    num: "07",
+    // num: "07",
     category: "Motion Graphics",
     title: "Mr. Robot Title Sequence",
     description: "Title squence for the show Mr. Robot",
@@ -92,7 +114,7 @@ const projects = [
     videoUrl: "https://player.vimeo.com/video/233770793", 
   },
   {
-    num: "06",
+    // num: "07",
     category: "Video Production",
     title: "UC Davis Football Intro Hype",
     description: "Intro video for the UC Davis football team.",
@@ -104,7 +126,7 @@ const projects = [
     videoUrl: "https://player.vimeo.com/video/779450696", 
   },
   {
-    num: "07",
+    // num: "08",
     category: "Video Production",
     title: "UC Davis Homeoming Commercial",
     description: "Promotional commercial played around the UC Davis campus to promote Homecoming.",
@@ -114,7 +136,19 @@ const projects = [
     github: "",
     vimeo: "https://vimeo.com/779448273",
     videoUrl: "https://player.vimeo.com/video/779448273", 
-  }
+  },
+  {
+    // num: "08"
+    category: "Graphic Design",
+    title: "UC Davis Football Countdown",
+    description: "Social Media Content for Football Kickoff.",
+    stack: [{ name: "Photoshop" }],
+    image: "/assets/images/1 day FB IG.jpeg",
+    live: "",
+    github: "",
+    vimeo: "",
+    videoUrl: "", 
+  },
 ];
 
 const Projects = () => {
