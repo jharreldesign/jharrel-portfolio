@@ -59,6 +59,7 @@ const projects = [
   },
   {
     // num: "05",
+    // num: "05",
     category: "Fullstack",
     title: "Real Time Chat",
     description: "A full stack app that allows you to chat in real time with others.",
@@ -69,6 +70,7 @@ const projects = [
   },
   {
     // num: "06",
+    // num: "06",
     category: "Frontend",
     title: "Zombie Attack",
     description: "A React based game to show lifting state.",
@@ -78,6 +80,7 @@ const projects = [
     github: "",
   },
   {
+    // num: "06",
     // num: "06",
     category: "Video Production",
     title: "Demo Reel",
@@ -91,6 +94,7 @@ const projects = [
   },
   {
     // num: "07",
+    // num: "07",
     category: "Video Production",
     title: "Playoff Highlights: Golden State Warriors",
     description: "Highlight reel for the Golden State Warriors playoff game vs. Sacramento Kings",
@@ -102,6 +106,7 @@ const projects = [
     videoUrl: "https://player.vimeo.com/video/823899563", 
   },
   {
+    // num: "07",
     // num: "07",
     category: "Motion Graphics",
     title: "Mr. Robot Title Sequence",
@@ -115,6 +120,7 @@ const projects = [
   },
   {
     // num: "07",
+    // num: "07",
     category: "Video Production",
     title: "UC Davis Football Intro Hype",
     description: "Intro video for the UC Davis football team.",
@@ -126,6 +132,7 @@ const projects = [
     videoUrl: "https://player.vimeo.com/video/779450696", 
   },
   {
+    // num: "08",
     // num: "08",
     category: "Video Production",
     title: "UC Davis Homeoming Commercial",
