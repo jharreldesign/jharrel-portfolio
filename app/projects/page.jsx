@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { BsArrowUpRight, BsGithub, BsGlobe, BsVimeo, BsWindowDesktop } from "react-icons/bs";
+import { BsArrowUpRight, BsGithub, BsGlobe, BsVimeo } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -138,20 +138,120 @@ const projects = [
     videoUrl: "https://player.vimeo.com/video/779448273", 
   },
   {
+    // num: "08",
+    category: "Video Production",
+    title: "Ray Fosse Remembered",
+    description: "Tribute video to the great Oakland Athletics broadcaster, Ray Fosse",
+    stack: [{ name: "Premiere Pro" }, { name: "After Effects" }],
+    image: "/assets/projects/rey-fosse.jpg",
+    live: "https://vimeo.com/823899660",
+    github: "",
+    vimeo: "https://vimeo.com/823899660",
+    videoUrl: "https://player.vimeo.com/video/823899660", 
+  },
+  {
+    // num: "08",
+    category: "Video Production",
+    title: "Women of Team - The Women Leading the San Jose Sharks",
+    description: "Spotlight on the women involved with the San Jose Sharks for Women in Sports Day",
+    stack: [{ name: "Premiere Pro" }, { name: "After Effects" }],
+    image: "/assets/projects/women-of-teal.jpg",
+    live: "https://vimeo.com/824901459",
+    github: "",
+    vimeo: "https://vimeo.com/824901459",
+    videoUrl: "https://player.vimeo.com/video/824901459", 
+  },
+  {
     // num: "08"
     category: "Graphic Design",
     title: "UC Davis Football Countdown",
     description: "Social Media Content for Football Kickoff.",
     stack: [{ name: "Photoshop" }],
-    image: "/assets/images/1-day-FB-IG.jpg",
+    image: "/assets/projects/images/1-day-FB-IG.jpg",
     live: "https://dribbble.com/shots/25481574-UC-Davis",
     github: "",
     vimeo: "",
     videoUrl: "", 
   },
+  {
+    // num: "08"
+    category: "Graphic Design",
+    title: "UC Davis Football Countdown",
+    description: "Social Media Content for Football Kickoff.",
+    stack: [{ name: "Photoshop" }],
+    image: "/assets/projects/images/Keelan.jpg",
+    live: "https://dribbble.com/shots/25481574-UC-Davis",
+    github: "",
+    vimeo: "",
+    videoUrl: "", 
+  },
+  {
+    // num: "08"
+    category: "Graphic Design",
+    title: "UC Davis Football Countdown",
+    description: "Social Media Content for Football Kickoff.",
+    stack: [{ name: "Photoshop" }],
+    image: "/assets/projects/images/QCRB-Championship.png",
+    live: "https://dribbble.com/shots/25481574-UC-Davis",
+    github: "",
+    vimeo: "",
+    videoUrl: "", 
+  },
+  {
+    // num: "08"
+    category: "Graphic Design",
+    title: "UC Davis Football Countdown",
+    description: "Social Media Content for Football Kickoff.",
+    stack: [{ name: "Photoshop" }],
+    image: "/assets/projects/images/This-Week-Sept-4.jpg",
+    live: "https://dribbble.com/shots/25481574-UC-Davis",
+    github: "",
+    vimeo: "",
+    videoUrl: "", 
+  },
+  {
+    // num: "08"
+    category: "Graphic Design",
+    title: "UC Davis Football Countdown",
+    description: "Social Media Content for Football Kickoff.",
+    stack: [{ name: "Photoshop" }],
+    image: "/assets/projects/images/Womens-Soccer-Game-Day.jpg",
+    live: "https://dribbble.com/shots/25481574-UC-Davis",
+    github: "",
+    vimeo: "",
+    videoUrl: "", 
+  },
+  {
+    // num: "08"
+    category: "Graphic Design",
+    title: "UC Davis Football Countdown",
+    description: "Social Media Content for Football Kickoff.",
+    stack: [{ name: "Photoshop" }],
+    image: "/assets/projects/images/ucd-mini-plan.jpg",
+    live: "https://dribbble.com/shots/25481574-UC-Davis",
+    github: "",
+    vimeo: "",
+    videoUrl: "", 
+  },
+  {
+    // num: "08"
+    category: "Graphic Design",
+    title: "UC Davis Football Countdown",
+    description: "Social Media Content for Football Kickoff.",
+    stack: [{ name: "Photoshop" }],
+    image: "/assets/projects/images/ucd-fb-newspaper.jpeg",
+    live: "https://dribbble.com/shots/25481574-UC-Davis",
+    github: "",
+    vimeo: "",
+    videoUrl: "", 
+  },
+
 ];
 
+const categories = ["All", "Fullstack", "Frontend", "Video Production", "Graphic Design", "Motion Graphics"];
+
 const Projects = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIframe, setCurrentIframe] = useState("");
 
@@ -165,21 +265,39 @@ const Projects = () => {
     setCurrentIframe("");
   };
 
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projects
+      : projects.filter((project) => project.category === selectedCategory);
+
   return (
     <motion.div
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-6 xl:items-start"
+      className="min-h-[80vh] flex flex-col items-center py-12 xl:py-6"
     >
+      {/* Category Filter */}
+      <div className="flex gap-4 mb-8">
+        {categories.map((category) => (
+          <button
+            key={category}
+            className={`px-4 py-2 rounded-lg text-white ${selectedCategory === category ? "bg-blue-500" : "bg-gray-700"}`}
+            onClick={() => setSelectedCategory(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      {/* Project Grid */}
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <div
               key={index}
               className="flex flex-col gap-4 p-4 bg-white/10 rounded-lg shadow-lg"
             >
-              {/* Image with click handler to open modal */}
               <div
                 onClick={() => project.videoUrl && openModal(project.videoUrl)}
                 className="relative h-48 w-full cursor-pointer"
@@ -191,8 +309,6 @@ const Projects = () => {
                   className="object-cover rounded-md"
                 />
               </div>
-
-              {/* Project Details */}
               <div className="flex flex-col gap-2">
                 <h3 className="font-bold text-lg">
                   {project.category} Project: {project.title}
@@ -207,10 +323,7 @@ const Projects = () => {
                   ))}
                 </ul>
               </div>
-
-              {/* Buttons */}
               <div className="flex gap-4 mt-auto">
-                {/* Live Project Button */}
                 <Link href={project.live} target="_blank" rel="noopener noreferrer">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
@@ -223,9 +336,7 @@ const Projects = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-
-                {/* Conditional GitHub or Vimeo Icon */}
-                {project.github ? (
+                {project.github && (
                   <Link href={project.github} target="_blank" rel="noopener noreferrer">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
@@ -238,23 +349,7 @@ const Projects = () => {
                       </Tooltip>
                     </TooltipProvider>
                   </Link>
-                ) : project.vimeo ? (
-                  <div
-                    onClick={() => openModal(project.videoUrl)}
-                    className="w-10 h-10 rounded-full bg-white/10 flex justify-center items-center cursor-pointer"
-                  >
-                    <TooltipProvider delayDuration={100}>
-                      <Tooltip>
-                        <TooltipTrigger>
-                          <BsVimeo className="text-white text-xl" />
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>Vimeo Video</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </div>
-                ) : null}
+                )}
               </div>
             </div>
           ))}
@@ -263,23 +358,19 @@ const Projects = () => {
 
       {/* Video Modal */}
       {isModalOpen && (
-        <div className="modal-container">
-          <div className="modal-content relative">
-            {/* Close Modal Button */}
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50">
+          <div className="relative bg-white rounded-lg shadow-lg w-full max-w-3xl">
+            <iframe
+              src={currentIframe}
+              className="w-full h-96 rounded-lg"
+              allowFullScreen
+            ></iframe>
             <button
+              className="absolute top-2 right-2 text-gray-800 bg-gray-200 hover:bg-gray-300 rounded-full p-2"
               onClick={closeModal}
-              className="modal-close-btn"
             >
               Close
             </button>
-            {/* Embed Vimeo Video */}
-            <iframe
-              src={currentIframe}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              title="Project Video"
-              className="w-full h-[60vh] sm:h-[70vh] md:h-[75vh] lg:h-[80vh] rounded-lg"
-            ></iframe>
           </div>
         </div>
       )}
